@@ -76,6 +76,7 @@ body {
     font-family: 'Montserrat',sans-serif;
     font-weight: var(--normal-weight);
     font-size: var(--normal);
+    margin: auto 0;
     overflow: hidden;
     display: grid;
     place-content: center;
