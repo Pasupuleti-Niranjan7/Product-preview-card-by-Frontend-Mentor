@@ -1,0 +1,223 @@
+:root {
+    /* --- Colors --- */
+    --Green-500: #298764;
+    --Green-700: #1b4133;
+    --Black: #1c232b;
+    --Grey: #6c7289;
+    --Cream: #f2ebe3;
+    --White: #ffffff;
+
+    /* --- font-size --- */
+    --normal: 14px;
+
+    /* --- font-weight--- */
+    --normal-weight: 500;
+    --bold: 700;
+}
+
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+} 
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  /* 10. Create a root stacking context
+*/
+/* #root, #__next {
+  isolation: isolate;
+} */
+
+body {
+    background-color: var(--Cream);
+    font-family: 'Montserrat',sans-serif;
+    font-weight: var(--normal-weight);
+    font-size: var(--normal);
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+.product {
+    background-color: var(--White);
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    overflow: hidden;
+}
+
+.product__type {
+    font-family: 'Montserrat',serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--normal-weight);
+    color: var(--Grey);
+    font-size: 0.8rem;
+    padding: 0.8rem 0 0.5rem 1.4rem;
+}
+
+.product__heading {
+    font-weight: var(--bold);
+    font-family: 'Fraunces', sans-serif;
+    line-height: 26px;
+    padding: 0.2rem 0 0.6rem 1.4rem;
+    font-size: 1.67rem;
+    color: var(--Black);
+}
+
+.procduct__context {
+    color: var(--Grey);
+    font-weight: var(--normal-weight);
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem 0.5rem 1.4rem;
+    overflow-wrap: break-word;
+}
+
+.product__price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0.5rem 0 0.3rem 1.4rem;
+}
+
+.product__dsntprice {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: var(--bold);
+    font-size: 1.8rem;
+    color: var(--Green-500);
+}
+
+.product__orgprice {
+    font-family: 'Montserrat',serif;
+    font-size: 0.7rem;
+    color: var(--Grey);
+    text-decoration: line-through;
+    font-weight: var(--normal-weight);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.2rem auto;
+    padding: 0.7rem 5rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: var(--Green-500);
+    color: var(--White);
+    font-family: 'Montserrat',serif;
+    font-size: 0.7rem;
+    font-weight: var(--bold);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-logo {
+    height: 13px;
+    width: 13px;
+}
+
+.btn:hover {
+    background-color: var(--Green-700);
+}
+
+@media (min-width: 590px) {
+
+  body {
+    min-height: 100vh;
+    max-width: 100%;
+    width: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #1b4133;
+  }
+
+  .product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product__img {
+    height: 100%;
+  }
+
+  .procduct__context{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1;
+  }
+
+  .product__type {
+    padding: 2rem 0 1.5rem 2rem;
+  }
+
+  .product__heading{
+    font-size: 2rem;
+    padding: 0 1.5rem 2rem 2rem;
+    letter-spacing: 1px;
+    line-height: 30px;
+  }
+
+  .procduct__context{
+    padding: 0rem 2rem 1rem 2rem;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+
+  .product__price {
+    margin: 0.5rem 0 1rem 2rem;
+  }
+
+  .btn {
+    margin-top: 1.5rem;
+  }
+}
